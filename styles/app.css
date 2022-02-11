@@ -477,6 +477,7 @@
 /* Mulish end */
 
 
+/* variables start */
 :root {
   --font-inter: 'Inter';
   --font-playfair: 'Playfair Display';
@@ -491,6 +492,7 @@
   --orange: #FB8F1D;
   --white: #ffffff;
 }
+/* variables end */
 
 
 /* base styles start */
@@ -506,13 +508,13 @@ body {
 }
 
 body {
-  font-family: 'Inter';
+  font-family: var(--font-inter);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  color: #202336;
-  background-color: #fff;
+  color: var(--dark);
+  background-color: var(--white);
 }
 
 a {
@@ -540,4 +542,250 @@ img {
   width: 100%;
   height: 100%;
 }
+
+.container {
+  max-width: 1310px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--base {
+  width: 130px;
+  height: 45px;
+}
+
+.btn--transparent {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  position: relative;
+}
+
+.btn--orange {
+  background-color: var(--orange);
+  color: var(--white);
+}
 /* base styles end */
+
+
+/* header start */
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+}
+
+.logo {
+  width: 41px;
+  height: 41px;
+}
+
+.header__container {
+  padding-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin-left: 35px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--silver-header);  
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--dark);
+}
+
+.header__btn {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;  
+  gap: 20px;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger__line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark);
+  border-radius: 4px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.burger__line--first {
+  top: 0;
+  left: 0;
+}
+
+.burger__line--second {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.burger__line--second:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark);
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+
+.burger__line--third {
+  bottom: 0;
+  left: 0;
+}
+
+.header__container.open-menu .burger__line--first {
+  opacity: 0;
+}
+
+.header__container.open-menu .burger__line--second {
+  transform: rotate(-45deg);
+}
+
+.header__container.open-menu .burger__line--second::before {
+  transform: rotate(90deg);
+}
+
+.header__container.open-menu .burger__line--third {
+  opacity: 0;
+}
+
+.header__container.header__container.open-menu .header-content-wrap {
+  opacity: 1;
+  pointer-events: unset;
+}
+/* header end */
+
+
+/* media 992px start*/
+@media screen and (max-width: 992px) {
+
+  /* header start */
+    .nav__item {
+      margin-left: 30px;
+    }
+    .header__btn {
+      margin-left: 30px;
+    }
+  /* header end */
+}
+/* media 992px end */
+
+
+/* media 768px start */
+@media screen and (max-width: 768px) {
+
+  /* header start */
+  .header__container {
+    padding-top: 25px;
+  }
+
+  .header-content-wrap {
+    position: fixed;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    padding: 20px 0;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+
+  .nav {
+    flex-direction: column;
+    
+  }
+
+  .nav__item {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .nav__item:first-child {
+    margin-top: 0;
+  }
+
+  .nav__link {
+    font-size: 28px;
+  }
+
+  .header__btn {
+    margin-left: 0;
+    margin-top: 50px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn--base {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .burger {
+    display: block;
+  }
+/* header end */
+
+}
+/* media 768px end */
