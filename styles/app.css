@@ -477,6 +477,22 @@
 /* Mulish end */
 
 
+:root {
+  --font-inter: 'Inter';
+  --font-playfair: 'Playfair Display';
+  --font-mulish: 'Mulish';
+  --black: #000000;
+  --dark: #202336;
+  --silver-dark: #4A4C53;
+  --silver: #7D7987;
+  --silver-footer: #848484;
+  --silver-header: #B8BECD;
+  --color-border: #AFB0B9;
+  --orange: #FB8F1D;
+  --white: #ffffff;
+}
+
+
 /* base styles start */
 *, 
 ::after,
