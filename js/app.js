@@ -9,3 +9,9 @@ if(header) {
         }
     })
 }
+//photo parallax
+var scenes = document.querySelectorAll('.scene');
+scenes.forEach(scene => {
+    var parallaxInstance = new Parallax(scene); 
+})
+
