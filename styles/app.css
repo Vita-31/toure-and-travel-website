@@ -599,6 +599,12 @@ img {
   line-height: 140%;
 }
 
+.title--card {
+  font-family: var(--font-inter);
+  font-size: 18px;
+  line-height: 150%;
+}
+
 .subject {
   font-weight: 600;
   font-size: 22px;
@@ -836,6 +842,91 @@ img {
 }
 /* about end */
 
+/* features start */
+.feauters {
+  margin-top: 290px;
+  padding-bottom: 100px;
+}
+
+.head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.more-text {
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--orange);
+}
+
+.more-text:hover {
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+}
+
+.more-arrow {
+  width: 4px;
+  height: 9px;
+}
+
+.more__arrow {
+  margin-left: 10px;
+}
+
+.feauters__cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 55px;
+}
+
+.feauters__card {
+  position: relative;
+}
+
+.card {
+  width: calc((100% - 75px) / 4);
+  height: 335px;
+  margin-left: 25px;
+}
+
+.card-picture {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card__desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.desc {
+  background-color: var(--white);
+  padding: 10px 20px 0 0;
+  border-top-right-radius: 8px;
+}
+
+.subtitle {
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--silver);
+}
+/* features end */
+
 /* media 1200px start */
 @media screen and (max-width: 1200px) {
 
@@ -906,6 +997,18 @@ img {
     flex-direction: column;
   }
   /* banner end */
+
+  /* feauters start */
+  .feauters__cards {
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .card {
+    width: calc((100% - 25px)  / 2);
+    margin-left: 0;
+  }
+  /* feauters end */
 }
 /* media 992px end */
 
@@ -1043,5 +1146,16 @@ img {
   }
   /* about end */
 
+
+    /* feauters start */
+    .feauters__cards {
+      gap: 35px 0;
+    }
+  
+    .card {
+      width: 100%;
+      margin-left: 0;
+    }
+    /* feauters end */
 }
 /* media 568px end */
