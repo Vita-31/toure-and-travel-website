@@ -599,7 +599,7 @@ img {
   line-height: 140%;
 }
 
-.title--card {
+.title--name {
   font-family: var(--font-inter);
   font-size: 18px;
   line-height: 150%;
@@ -937,6 +937,30 @@ img {
   justify-content: space-between;
 }
 /* guid end */
+
+.reviews {
+  margin-top: 250px;
+}
+
+.reviews__block {
+  margin-top: 60px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars__icon {
+  width: 25px;
+  height: 24px;
+}
+
+.slider__item {
+  width: 385px;
+  height: 490px;
+}
 
 /* media 1200px start */
 @media screen and (max-width: 1200px) {
