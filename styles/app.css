@@ -543,6 +543,14 @@ img {
   height: 100%;
 }
 
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   max-width: 1310px;
   width: 100%;
@@ -617,6 +625,12 @@ img {
   font-size: 17px;
   line-height: 180%;
   color: var(--silver);
+}
+
+.text--big {
+  font-size: 24px;
+  line-height: 150%;
+  color: var(--black);
 }
 /* base styles end */
 
@@ -952,14 +966,85 @@ img {
   justify-content: space-between;
 }
 
+.review-content{
+  max-width: 450px;
+  width: 100%;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+}
+
+.review__text {
+  margin-top: 30px;
+}
+
 .stars__icon {
   width: 25px;
   height: 24px;
 }
 
-.slider__item {
+.review__name {
+  margin-top: 40px;
+}
+
+.name-title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 180%;
+}
+
+.name-subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 180%;
+}
+
+.review__slider {
+  position: relative;
+  margin-right: 100px;
+}
+
+.slider__arrows {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  background-color: var(--white);
+  border-top-left-radius: 8px;
+  padding: 20px 0 0 30px;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.arrow.arrow--disabled svg path,
+.arrow.arrow--disabled svg circle {
+  stroke: #D7D7D7;
+  cursor: default;
+}
+
+.slider__list {
   width: 385px;
   height: 490px;
+
+}
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /* media 1200px start */
