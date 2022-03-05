@@ -493,6 +493,7 @@
   --orange: #FB8F1D;
   --white: #ffffff;
   --green: #1ABE84;
+  --light-green: #BFF0DD;
 }
 /* variables end */
 
@@ -549,6 +550,15 @@ button {
   background-color: transparent;
   outline: none;
   border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  text-shadow: none;
   padding: 0;
   margin: 0;
 }
@@ -823,15 +833,87 @@ button {
 }
 
 .select {
-  max-width: 220px;
-  width: 100%;
-  height: 50px;
-  border-radius: 6px;
+  position: relative;
+}
+
+.select-box {
+  position: relative;
+}
+
+.select-box__input {
   border: 1px solid var(--color-border);
-  padding: 5px;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.select-box__input,
+.select-box__input::placeholder,
+.select-box__input:focus {
+  font-weight: normal;
   font-size: 15px;
-  line-height: 125%;
-  outline: none;
+  line-height: 180%;
+  color: var(--silver-dark);
+}
+
+.select-box__btn {
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  transform: rotate(0deg);
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s;
+}
+
+.select-box__img {
+  width: 9px;
+  height: 6px;
+  object-fit: contain;
+}
+
+.select-list {
+  position: absolute;
+  left: 0;
+  top: 52px;
+  width: 100%;
+  height: 120px;
+  color: var(--silver-dark);
+  border: 1px solid var(--color-border);
+  background-color: var(--white);
+  overflow-y: auto;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.select-list::-webkit-scrollbar,
+.select-list::-webkit-scrollbar-thumb,
+.select-list::-webkit-scrollbar-track {
+  width: 0;
+  height: 0;
+}
+
+.select-list__item {
+  padding: 5px 20px;
+  font-weight: normal;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.select-list__item:hover {
+  background-color: var(--light-green);
+}
+
+.select.show-list .select-list {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.select.show-list .select-box__btn {
+  transform: rotate(-180deg);
 }
 
 .travel__btn {
@@ -1045,6 +1127,7 @@ button {
   cursor: pointer;
 }
 
+.arrow:disabled,
 .arrow:disabled svg path,
 .arrow:disabled svg circle {
   stroke: #D7D7D7;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thousant sunny</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./styles/app.css"> 
 </head>
 <body>
@@ -51,31 +52,67 @@
                     <h1 class="title title--big">Explore and Travel</h1>
                     <p class="banner__text subject">Holiday finder</p>
                     <div class="banner__travel travel">
-                        <form class="travel-selects">
-                            <select name="location" class="select">
-                                <option value="0" disabled>Location</option>
-                                <option value="1">Location</option>
-                                <option value="2">Location</option>
-                                <option value="3">Location</option>
-                            </select>
-                            <select name="activity" id="" class="select">
-                                <option value="0" disabled>Activity</option>
-                                <option value="1">Activity</option>
-                                <option value="2">Activity</option>
-                                <option value="3">Activity</option>
-                            </select>
-                            <select name="grade" id="" class="select">
-                                <option value="0" disabled>Grade</option>
-                                <option value="1">Grade</option>
-                                <option value="2">Grade</option>
-                                <option value="3">Grade</option>
-                            </select>
-                            <select name="date" id="" class="select">
-                                <option value="0" disabled>Date</option>
-                                <option value="1">Date</option>
-                                <option value="2">Date</option>
-                                <option value="3">Date</option>
-                            </select>
+                        <form class="travel-selects" id="form-select">
+                            <div class="select">
+                                <div class="select-box">
+                                    <input type="text" class="select-box__input" name="location" placeholder="Location" readonly>
+                                    <button class="select-box__btn" aria-label="Button arrow down" type="button">
+                                        <img src="./img/icons/arrow-down.svg" class="select-box__img" alt="Arrow down" width="1" height="1" decoding="async" loading="lazy">
+                                    </button>
+                                </div>
+                                <ul class="select-list">
+                                    <li class="select-list__item">Canada</li>
+                                    <li class="select-list__item">New York</li>
+                                    <li class="select-list__item">Paris</li>
+                                    <li class="select-list__item">Berlin</li>
+                                    <li class="select-list__item">Pekin</li>
+                                </ul>
+                            </div>
+                            <div class="select">
+                                <div class="select-box">
+                                    <input type="text" class="select-box__input" name="activity" placeholder="Activity" readonly>
+                                    <button class="select-box__btn" aria-label="Button arrow down" type="button">
+                                        <img src="./img/icons/arrow-down.svg" class="select-box__img" alt="Arrow down" width="1" height="1" decoding="async" loading="lazy">
+                                    </button>
+                                </div>
+                                <ul class="select-list">
+                                    <li class="select-list__item">Active</li>
+                                    <li class="select-list__item">Not active</li>
+                                    <li class="select-list__item">Active</li>
+                                    <li class="select-list__item">Not active</li>
+                                    <li class="select-list__item">Active</li>
+                                </ul>
+                            </div>
+                            <div class="select">
+                                <div class="select-box">
+                                    <input type="text" class="select-box__input" name="grade" placeholder="Grade" readonly>
+                                    <button class="select-box__btn" aria-label="Button arrow down" type="button">
+                                        <img src="./img/icons/arrow-down.svg" class="select-box__img" alt="Arrow down" width="1" height="1" decoding="async" loading="lazy">
+                                    </button>
+                                </div>
+                                <ul class="select-list">
+                                    <li class="select-list__item">Premium</li>
+                                    <li class="select-list__item">Luks</li>
+                                    <li class="select-list__item">Standart+</li>
+                                    <li class="select-list__item">Standart</li>
+                                    <li class="select-list__item">Econom</li>
+                                </ul>
+                            </div>
+                            <div class="select">
+                                <div class="select-box">
+                                    <input type="text" class="select-box__input" name="date" placeholder="Date" readonly>
+                                    <button class="select-box__btn" aria-label="Button arrow down" type="button">
+                                        <img src="./img/icons/arrow-down.svg" class="select-box__img" alt="Arrow down" width="1" height="1" decoding="async" loading="lazy">
+                                    </button>
+                                </div>
+                                <ul class="select-list">
+                                    <li class="select-list__item">10.03.2022</li>
+                                    <li class="select-list__item">15.03.2022</li>
+                                    <li class="select-list__item">20.03.2022</li>
+                                    <li class="select-list__item">25.03.2022</li>
+                                    <li class="select-list__item">30.03.2022</li>
+                                </ul>
+                            </div>
                         </form>
                         <button class="travel__btn btn btn--base btn--orange">Explore</button>
                     </div>
@@ -92,12 +129,16 @@
                     <img src="./img/travel-photo-2.png" alt="Travel photo" class="about-photo" width="1" height="1" data-depth="0.3">
                 </div>
                 <div class="content">
-                    <h2 class="title title--base">A new way to explore the world </h2>
-                    <p class="content__text text">
+                    <h2 class="title title--base" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        A new way to explore the world 
+                    </h2>
+                    <p class="content__text text"  data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                         For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect 
                         trip, but now, they can also let Lonely Planet Experiences lead the way
                     </p>
-                    <a href="#" class="content__btn btn btn--base btn--orange">Learn more</a>
+                    <a href="#" class="content__btn btn btn--base btn--orange"  data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        Learn more
+                    </a>
                 </div>
             </div>
         </section>
@@ -105,35 +146,35 @@
         <section class="feauters">
             <div class="container">
                 <div class="head-title">
-                    <h2 class="title title--base">Featured destinations</h2>
+                    <h2 class="title title--base" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">Featured destinations</h2>
                     <a href="#" class="more">
                         <p class="more-text">View all</p>
                         <img src="./img/icons/arrow-right-yellow.svg" class="more__arrow more-arrow" alt="Yellow arrow right">
                     </a>
                 </div>
                 <div class="feauters__cards">
-                    <div class="card feauters__card">
+                    <div class="card feauters__card" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                         <img src="./img/features-photo-1.png" alt="" class="card-picture">
                         <div class="card__name card-name">
                             <h3 class="title title--name">Raja Ampat</h3>
                             <p class="subtitle">Indonesia</p>
                         </div>
                     </div>
-                    <div class="card feauters__card">
+                    <div class="card feauters__card" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom">
                         <img src="./img/features-photo-2.png" alt="" class="card-picture">
                         <div class="card__name card-name">
                             <h3 class="title title--name">Raja Ampat</h3>
                             <p class="subtitle">Indonesia</p>
                         </div>
                     </div>
-                    <div class="card feauters__card">
+                    <div class="card feauters__card" data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom">
                         <img src="./img/features-photo-3.png" alt="" class="card-picture">
                         <div class="card__name card-name">
                             <h3 class="title title--name">Raja Ampat</h3>
                             <p class="subtitle">Indonesia</p>
                         </div>
                     </div>
-                    <div class="card feauters__card">
+                    <div class="card feauters__card" data-aos="fade-up" data-aos-duration="1900" data-aos-anchor-placement="top-bottom">
                         <img src="./img/features-photo-4.png" alt="" class="card-picture">
                         <div class="card__name card-name">
                             <h3 class="title title--name">Raja Ampat</h3>
@@ -147,12 +188,16 @@
         <section class="guid">
             <div class="container guid__container">
                 <div class="content">
-                    <h2 class="title title--base">Guides by Thousand Sunny</h2>
-                    <p class="content__text text">
+                    <h2 class="title title--base" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        Guides by Thousand Sunny
+                    </h2>
+                    <p class="content__text text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                         Packed with tips and advice from our on-the-ground experts, our city guides app (iOS and Android) is 
                         the ultimate resource before and during a trip.
                     </p>
-                    <button class="content__btn btn btn--base btn--orange">Download</button>
+                    <button class="content__btn btn btn--base btn--orange" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        Download
+                    </button>
                 </div>
                 <div class="scene">
                     <img src="./img/travel-photo-4.png" alt="Travel photo" class="about-photo" width="1" height="1" data-depth="0.3">
@@ -162,10 +207,12 @@
 
         <section class="reviews">
             <div class="container">
-                <h2 class="title title--base">Testimonials</h2>
+                <h2 class="title title--base" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    Testimonials
+                </h2>
                 <div class="reviews__block review">
                     <div class="review-content">
-                        <ul class="stars">
+                        <ul class="stars" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                             <li>
                                 <img src="./img/icons/start-yellow.svg" alt="Star" class="stars__icon">
                             </li>
@@ -182,16 +229,16 @@
                                 <img src="./img/icons/start-yellow.svg" alt="Star" class="stars__icon">
                             </li>
                         </ul>
-                        <p class="review__text text text--big">
+                        <p class="review__text text text--big" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                             “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, 
                             facilisis quis purus. Morbi blandit sit amet turpis nec”
                         </p>
-                        <div class="review__name">
+                        <div class="review__name" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                             <h3 class="name-title">Edward Newgate</h3>
                             <p class="name-subtitle">Founder Circle</p>
                         </div>
                     </div>
-                    <div class="review__slider slider">
+                    <div class="review__slider slider" data-aos="fade-up-left" data-aos-duration="1300" data-aos-anchor-placement="top-bottom">
                         <div class="slider__list">
                             <div class="slider__item active">
                                 <img src="./img/slider-photo-1.png" alt="Edward Newgate" class="slider__img" width="1" height="1" decoding="async" loading="lazy">
@@ -213,13 +260,13 @@
                             </div>
                         </div>
                         <div class="slider__arrows arrows">
-                            <button class="arrow arrow-left" id="btn-prev">
+                            <button class="arrow arrow-left" id="btn-prev" aria-label="previous button" disabled>
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M22 25L18 20.5L22 16" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" stroke="#000" stroke-width="2"/>
                                 </svg>
                             </button>
-                            <button class="arrow arrow-right" id="btn-next">
+                            <button class="arrow arrow-right" id="btn-next" aria-label="next button">
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18 15L22 19.5L18 24" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <circle cx="20" cy="20" r="19" stroke="black" stroke-width="2"/>
@@ -233,7 +280,7 @@
 
         <section class="stories">
             <div class="container stories-conatiner">
-                <div class="head-title">
+                <div class="head-title" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                     <h2 class="title title--base">Trending stories</h2>
                     <a href="#" class="more">
                         <p class="more-text">View all</p>
@@ -241,7 +288,7 @@
                     </a>
                 </div>
                 <div class="stories__cards">
-                    <div class="stories__card card-item">
+                    <div class="stories__card card-item" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                         <img src="./img/stories-photo-1.png" alt="Stories" class="card-item__img" width="1" height="1" decoding="async" loading="lazy">
                         <h3 class="card-item__title">
                             The many benefits of taking a healing holiday
@@ -251,7 +298,7 @@
                         </p>
                         <a href="#" class="card-item__link">Read more</a>
                     </div>
-                    <div class="stories__card card-item">
+                    <div class="stories__card card-item" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom">
                         <img src="./img/stories-photo-2.png" alt="Stories" class="card-item__img" width="1" height="1" decoding="async" loading="lazy">
                         <h3 class="card-item__title">
                             The best Kyoto restaurant to try Japanese food
@@ -261,7 +308,7 @@
                         </p>
                         <a href="#" class="card-item__link">Read more</a>
                     </div>
-                    <div class="stories__card card-item">
+                    <div class="stories__card card-item" data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom">
                         <img src="./img/stories-photo-3.png" alt="Stories" class="card-item__img" width="1" height="1" decoding="async" loading="lazy">
                         <h3 class="card-item__title">
                             Skip Chichen Itza and head to this remote Yucatan
@@ -271,7 +318,7 @@
                         </p>
                         <a href="#" class="card-item__link">Read more</a>
                     </div>
-                    <div class="stories__card card-item">
+                    <div class="stories__card card-item" data-aos="fade-up" data-aos-duration="1900" data-aos-anchor-placement="top-bottom">
                         <img src="./img/stories-photo-4.png" alt="Stories" class="card-item__img" width="1" height="1" decoding="async" loading="lazy">
                         <h3 class="card-item__title">
                             Surf’s up at these beginner spots around the world
@@ -383,7 +430,10 @@
         </footer>
     </main>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script><script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/app.js"></script>
 </body>
 </html>

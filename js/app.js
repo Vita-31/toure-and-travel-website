@@ -21,6 +21,11 @@ const btnPrev = document.getElementById('btn-prev');
 const slides = document.querySelectorAll('.slider__item');
 let index = 0;
 
+function setFunc(index) {
+    activeSlide(index)
+    checkBtns(index)
+}
+
 function activeSlide(activeSlideIdx) {
     console.log(activeSlideIdx)
     slides.forEach(slide => {
@@ -32,22 +37,51 @@ function activeSlide(activeSlideIdx) {
 function nextSlide() {
     if(index === slides.length - 1) {
         index = 0
-        activeSlide(index)
+        setFunc(index)
     } else {
         index++
-        activeSlide(index)
+        setFunc(index)
     }
 }
 
 function prevSlide() {
     if(index === 0) {
         index = slides.length - 1;
-        activeSlide(index)
+        setFunc(index)
     } else {
         index--
-        activeSlide(index)
+        setFunc(index)
     }
 }
 
+function checkBtns(index) {
+    btnPrev.disabled = index === 0;
+    btnNext.disabled = index === slides.length - 1
+}
+
+// document.addEventListener('click', )
+
 btnNext.addEventListener('click', nextSlide)
 btnPrev.addEventListener('click', prevSlide)
+
+
+//show select list
+const formSelects = document.getElementById('form-select');
+if(formSelects) {
+    formSelects.addEventListener('click', (e) => {
+        const selectBlock  = e.target.closest('.select');
+        const selectBtn = e.target.closest('.select-box__btn');
+        const selectItem = e.target.closest('.select-list__item');
+        const selectInput = selectBlock.querySelector('.select-box__input');
+       
+        if(selectBtn) {
+            selectBlock.classList.add('show-list');
+        }
+        
+        if(selectItem) {
+            const selectItemText = selectItem.textContent;
+            selectInput.placeholder = selectItemText
+            selectBlock.classList.remove('show-list');
+        }
+    }) 
+}
