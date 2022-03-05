@@ -74,7 +74,7 @@ if(formSelects) {
         const selectInput = selectBlock.querySelector('.select-box__input');
        
         if(selectBtn) {
-            selectBlock.classList.add('show-list');
+            selectBlock.classList.toggle('show-list');
         }
         
         if(selectItem) {
