@@ -59,8 +59,7 @@ function checkBtns(index) {
     btnNext.disabled = index === slides.length - 1
 }
 
-// document.addEventListener('click', )
-
+document.addEventListener('load', checkBtns)
 btnNext.addEventListener('click', nextSlide)
 btnPrev.addEventListener('click', prevSlide)
 
