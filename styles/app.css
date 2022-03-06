@@ -488,7 +488,8 @@
   --silver: #7D7987;
   --silver-footer: #848484;
   --silver-footer-bg: #F9F9FB;
-  --silver-header: #050607;
+  --dark-header: #050607;
+  --silver-header: #B8BECD;
   --color-border: #AFB0B9;
   --orange: #FB8F1D;
   --white: #ffffff;
@@ -714,7 +715,7 @@ input {
 }
 
 .nav__link:hover {
-  color: var(--silver);
+  color: var(--dark);
 }
 
 .header__btn {
