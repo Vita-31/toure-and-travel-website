@@ -656,6 +656,14 @@ input {
   line-height: 150%;
   color: var(--black);
 }
+
+.plus,
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+}
 /* base styles end */
 
 
@@ -788,6 +796,25 @@ input {
 /* banner start */
 .banner {
   margin-top: 165px;
+  position: relative;
+}
+
+.banner__plus {
+  left: 468px;
+  top: 53px;
+  transform: rotate(-12deg);
+}
+
+.banner__circle {
+  width: 26px;
+  height: 26px;
+  left: 80px;
+  top: 327px;
+}
+
+.banner__circle-two {
+  left: 50%;
+  top: 616px;
 }
 
 .banner-content {
@@ -925,6 +952,17 @@ input {
 /* about start */
 .about {
   margin-top: 285px;
+  position: relative;
+}
+
+.about__plus {
+  left: 55%;
+  top: -6px;
+}
+
+.about__circle {
+  right: 103px;
+  top: 362px;
 }
 
 .about__container {
@@ -957,6 +995,22 @@ input {
 /* features start */
 .feauters {
   margin-top: 290px;
+  position: relative;
+}
+
+.feauters__plus {
+  top: -92px;
+  right: 171px;
+}
+
+.feauters__circle {
+  left: 121px;
+  top: 299px;
+}
+
+.feauters__circle-two {
+  left: 45%;
+  bottom: -44px;
 }
 
 .head-title {
@@ -1042,6 +1096,26 @@ input {
 /* guid start */
 .guid {
   margin-top: 230px;
+  position: relative;
+}
+
+.guid__plus {
+  width: 16px;
+  height: 16px;
+  right: 154px;
+  top: 43px;
+  transform: rotate(9deg);
+}
+
+.guid__plus-two {
+  left: 45%;
+  top: 420px;
+  transform: rotate(20deg);
+}
+
+.guid__circle {
+  top: 86px;
+  left: 45px;
 }
 
 .guid__container {
@@ -1054,6 +1128,24 @@ input {
 /* reviews start */
 .reviews {
   margin-top: 250px;
+  position: relative;
+}
+
+.reviews__plus {
+  left: 55%;
+  top: 580px;
+}
+
+.reviews__circle {
+  width: 42px;
+  height: 42px;
+  right: 84px;
+  top: 93px;
+}
+
+.reviews__circle-two {
+  left: 96px;
+  top: 299px;
 }
 
 .reviews__block {
@@ -1169,6 +1261,23 @@ input {
 /* stories start */
 .stories {
   margin-top: 285px;
+  position: relative;
+}
+
+.stories__plus {
+  left: 45%;
+  top: -34px;
+  transform: rotate(7.49deg);
+}
+
+.stories__circle {
+  left: 143px;
+  top: 368px;
+}
+
+.stories__circle-two {
+  top: 607px;
+  right: 35%;
 }
 
 .stories__cards {
